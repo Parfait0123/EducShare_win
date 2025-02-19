@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="631.0" prefWidth="885.0" xmlns="http://javafx.com/javafx/22"
+           fx:controller="docs.la_creme_des_cremes_docs.login.loginController">
+    <children>
+        <AnchorPane fx:id="login_anchropane" prefHeight="631.0" prefWidth="869.0" styleClass="iphone-toolbar"
+                    stylesheets="@../head.css" visible="false">
+            <children>
+                <ImageView fitHeight="580.0" fitWidth="914.0" layoutX="-4.0" layoutY="51.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@n.jpg"/>
+                    </image>
+                    <viewport>
+                        <Rectangle2D/>
+                    </viewport>
+                </ImageView>
+                <Pane prefHeight="56.0" prefWidth="910.0" styleClass="ipad-grey" stylesheets="@../head.css">
+                    <children>
+                        <Label layoutX="303.0" layoutY="-1.0" prefHeight="56.0" prefWidth="448.0">
+                            <font>
+                                <Font name="Bodoni MT Black" size="22.0"/>
+                            </font>
+                        </Label>
+                        <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#leave_Button"
+                                prefHeight="39.0" prefWidth="39.0" styleClass="round-red" textFill="#9a0000"/>
+                    </children>
+                </Pane>
+                <StackPane layoutX="185.0" layoutY="63.0" opacity="0.84" prefHeight="535.0" prefWidth="530.0">
+                    <children>
+                        <Pane fx:id="login_Pane" prefHeight="500.0" prefWidth="530.0" styleClass="simpleStyle">
+                            <children>
+                                <Label layoutX="163.0" layoutY="102.0" prefHeight="34.0" prefWidth="203.0"
+                                       text="Connectez-vous ">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="28.0"/>
+                                    </font>
+                                </Label>
+                                <ImageView fitHeight="102.0" fitWidth="111.0" layoutX="207.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@login_icon.png"/>
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="login_Button" layoutX="281.0" layoutY="359.0" mnemonicParsing="false"
+                                        onAction="#login" prefHeight="52.0" prefWidth="171.0" styleClass="record-sales"
+                                        text="Se connecter"/>
+                                <HBox layoutX="64.0" layoutY="304.0" prefHeight="55.0" prefWidth="415.0">
+                                    <children>
+                                        <Label prefHeight="55.0" prefWidth="177.0" text="Type du compte :">
+                                            <font>
+                                                <Font name="Berlin Sans FB" size="17.0"/>
+                                            </font>
+                                        </Label>
+                                        <RadioButton fx:id="login_account_type_Admin_RadioButton"
+                                                     mnemonicParsing="false" prefHeight="54.0" prefWidth="121.0"
+                                                     text="Administrateur">
+                                            <font>
+                                                <Font name="Berlin Sans FB" size="14.0"/>
+                                            </font>
+                                        </RadioButton>
+                                        <RadioButton fx:id="login_account_type_Student_RadioButton"
+                                                     mnemonicParsing="false" prefHeight="55.0" prefWidth="123.0"
+                                                     text="Etudiant">
+                                            <font>
+                                                <Font name="Berlin Sans FB" size="13.0"/>
+                                            </font>
+                                        </RadioButton>
+                                    </children>
+                                </HBox>
+                                <HBox layoutX="64.0" layoutY="164.0" prefHeight="55.0" prefWidth="389.0">
+                                    <children>
+                                        <Label prefHeight="71.0" prefWidth="171.0" text="Nom d'utilisateur :">
+                                            <font>
+                                                <Font name="Berlin Sans FB" size="20.0"/>
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="login_User_name_Field" prefHeight="50.0" prefWidth="216.0"
+                                                   promptText="Votre nom d'utlisateur">
+                                            <font>
+                                                <Font size="15.0"/>
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="passeword_hbox" layoutX="64.0" layoutY="233.0" prefHeight="55.0"
+                                      prefWidth="389.0">
+                                    <children>
+                                        <Label prefHeight="57.0" prefWidth="173.0" text="Mot de passe :">
+                                            <font>
+                                                <Font name="Berlin Sans FB" size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <StackPane>
+                                            <children>
+                                                <PasswordField fx:id="login_User_password_Field" prefHeight="50.0"
+                                                               prefWidth="216.0" promptText="Votre mot de passe">
+                                                    <font>
+                                                        <Font name="Berlin Sans FB" size="15.0"/>
+                                                    </font>
+                                                </PasswordField>
+                                                <TextField fx:id="login_User_password_Field2" prefHeight="50.0"
+                                                           prefWidth="216.0" promptText="Votre mot de passe"
+                                                           visible="false">
+                                                    <font>
+                                                        <Font name="Berlin Sans FB" size="15.0"/>
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </StackPane>
+                                    </children>
+                                </HBox>
+                                <HBox layoutX="155.0" layoutY="455.0" prefHeight="43.0" prefWidth="374.0">
+                                    <children>
+                                        <Label prefHeight="71.0" prefWidth="198.0" text="Vous n'avez pas de compte ?"
+                                               textFill="#dd0505">
+                                            <font>
+                                                <Font name="Berlin Sans FB" size="15.0"/>
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="login_go_to_signup_Button" mnemonicParsing="false"
+                                                onAction="#go_to_signup" prefHeight="52.0" prefWidth="178.0"
+                                                styleClass="glass-grey" text="Créer un compte">
+                                            <font>
+                                                <Font name="Berlin Sans FB" size="17.0"/>
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <StackPane layoutX="7.0" layoutY="164.0" prefHeight="56.0" prefWidth="32.0"
+                                           styleClass="imageSimpleStyle"/>
+                                <ImageView fx:id="btnPasswordVisibility" fitHeight="39.0" fitWidth="38.0"
+                                           layoutX="460.0" layoutY="242.0" onDragDetected="#onChangePasswordVisibility"
+                                           onMouseClicked="#onChangePasswordVisibility" pickOnBounds="true"
+                                           preserveRatio="true" styleClass="bevel-grey">
+                                    <image>
+                                        <Image url="@visibility_white.png"/>
+                                    </image>
+                                </ImageView>
+                                <ProgressIndicator fx:id="progressbar" layoutX="459.0" layoutY="365.0" prefHeight="41.0"
+                                                   prefWidth="50.0" progress="0.0" styleClass="simpleStyle"/>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="signup_Pane" prefHeight="542.0" prefWidth="530.0" styleClass="simpleStyle"
+                              visible="false">
+                            <children>
+                                <Label layoutX="166.0" layoutY="88.0" text="Créez votre compte  ">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="23.0"/>
+                                    </font>
+                                </Label>
+                                <ImageView fitHeight="82.0" fitWidth="88.0" layoutX="212.0">
+                                    <image>
+                                        <Image url="@signup.png"/>
+                                    </image>
+                                </ImageView>
+                                <VBox layoutX="43.0" layoutY="122.0" prefHeight="373.0" prefWidth="426.0" spacing="5.0">
+                                    <children>
+                                        <HBox prefHeight="42.0" prefWidth="426.0">
+                                            <children>
+                                                <Label prefHeight="42.0" prefWidth="203.0" text="Nom :">
+                                                    <font>
+                                                        <Font name="Berlin Sans FB" size="17.0"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="sign_up_last_name_Field" prefHeight="42.0"
+                                                           prefWidth="223.0">
+                                                    <font>
+                                                        <Font size="19.0"/>
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="42.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="42.0" prefWidth="203.0" text="Prénom :">
+                                                    <font>
+                                                        <Font name="Berlin Sans FB" size="17.0"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="sign_up_first_name_Field" prefHeight="42.0"
+                                                           prefWidth="223.0">
+                                                    <font>
+                                                        <Font name="Bell MT" size="19.0"/>
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="42.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="42.0" prefWidth="203.0" text="Nom d'utilisateur :">
+                                                    <font>
+                                                        <Font name="Berlin Sans FB" size="17.0"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="sign_up_user_name_Field" prefHeight="42.0"
+                                                           prefWidth="223.0">
+                                                    <font>
+                                                        <Font name="Bell MT" size="18.0"/>
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="42.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="42.0" prefWidth="203.0" text="Adresse email :">
+                                                    <font>
+                                                        <Font name="Berlin Sans FB" size="17.0"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="sign_up_email_Field" prefHeight="42.0"
+                                                           prefWidth="223.0">
+                                                    <font>
+                                                        <Font name="Bell MT" size="19.0"/>
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="42.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="42.0" prefWidth="203.0" text="Votre mot de passe :">
+                                                    <font>
+                                                        <Font name="Berlin Sans FB" size="17.0"/>
+                                                    </font>
+                                                </Label>
+                                                <StackPane>
+                                                    <children>
+                                                        <PasswordField fx:id="sign_up_password_Field" prefHeight="42.0"
+                                                                       prefWidth="223.0">
+                                                            <font>
+                                                                <Font name="Bell MT" size="18.0"/>
+                                                            </font>
+                                                        </PasswordField>
+                                                        <TextField fx:id="sign_up_password_Field2" prefHeight="42.0"
+                                                                   prefWidth="223.0" visible="false">
+                                                            <font>
+                                                                <Font name="Bell MT" size="18.0"/>
+                                                            </font>
+                                                        </TextField>
+                                                    </children>
+                                                </StackPane>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="42.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="42.0" prefWidth="203.0"
+                                                       text="Retapez le mot de passe :">
+                                                    <font>
+                                                        <Font name="Berlin Sans FB" size="17.0"/>
+                                                    </font>
+                                                </Label>
+                                                <StackPane>
+                                                    <children>
+                                                        <PasswordField fx:id="sign_up_confirm_pass_Field"
+                                                                       prefHeight="42.0" prefWidth="223.0">
+                                                            <font>
+                                                                <Font name="Bell MT" size="19.0"/>
+                                                            </font>
+                                                        </PasswordField>
+                                                        <TextField fx:id="sign_up_confirm_pass_Field2" prefHeight="42.0"
+                                                                   prefWidth="223.0" visible="false">
+                                                            <font>
+                                                                <Font name="Bell MT" size="18.0"/>
+                                                            </font>
+                                                        </TextField>
+                                                    </children>
+                                                </StackPane>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="42.0" prefWidth="200.0">
+                                            <children>
+                                                <Label prefHeight="42.0" prefWidth="203.0" text="Code d'autorisation :">
+                                                    <font>
+                                                        <Font name="Berlin Sans FB" size="17.0"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="sign_up_authorization_code_Field" prefHeight="42.0"
+                                                           prefWidth="223.0">
+                                                    <font>
+                                                        <Font name="Bell MT" size="18.0"/>
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="42.0" prefWidth="426.0" spacing="5.0">
+                                            <children>
+                                                <Label prefHeight="42.0" prefWidth="203.0" text="Type de compte :">
+                                                    <font>
+                                                        <Font name="Berlin Sans FB" size="17.0"/>
+                                                    </font>
+                                                </Label>
+                                                <RadioButton fx:id="sign_up_admin_radio" mnemonicParsing="false"
+                                                             prefHeight="42.0" prefWidth="115.0" text="Administrateur">
+                                                    <font>
+                                                        <Font name="Bell MT" size="13.0"/>
+                                                    </font>
+                                                </RadioButton>
+                                                <RadioButton fx:id="sign_up_student_radio" mnemonicParsing="false"
+                                                             prefHeight="42.0" prefWidth="107.0" text="Etudiant">
+                                                    <font>
+                                                        <Font name="Bell MT" size="13.0"/>
+                                                    </font>
+                                                </RadioButton>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Button layoutX="347.0" layoutY="502.0" mnemonicParsing="false" onAction="#signup"
+                                        prefHeight="26.0" prefWidth="119.0" styleClass="bevel-grey"
+                                        text="Créer le compte">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <StackPane layoutX="13.0" layoutY="14.0" prefHeight="42.0" prefWidth="60.0"
+                                           style="-fx-background-color: #edf0fb;">
+                                    <children>
+                                        <Button mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT"
+                                                onAction="#return_to_login" prefHeight="26.0" prefWidth="66.0"
+                                                style="-fx-background-color: #edf0fb;">
+                                            <graphic>
+                                                <ImageView fitHeight="50.0" fitWidth="50.0" opacity="0.88">
+                                                    <image>
+                                                        <Image url="@../bouton-retour.png"/>
+                                                    </image>
+                                                    <effect>
+                                                        <Glow/>
+                                                    </effect>
+                                                    <cursor>
+                                                        <Cursor fx:constant="CLOSED_HAND"/>
+                                                    </cursor>
+                                                </ImageView>
+                                            </graphic>
+                                            <cursor>
+                                                <Cursor fx:constant="CLOSED_HAND"/>
+                                            </cursor>
+                                        </Button>
+                                    </children>
+                                </StackPane>
+                                <ImageView fx:id="btnPasswordVisibility1" fitHeight="34.0" fitWidth="26.0"
+                                           layoutX="478.0" layoutY="322.0"
+                                           onDragDetected="#onChangePasswordVisibility1_Signup"
+                                           onMouseClicked="#onChangePasswordVisibility1_Signup" pickOnBounds="true"
+                                           preserveRatio="true" styleClass="bevel-grey">
+                                    <image>
+                                        <Image url="@visibility_white.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="btnPasswordVisibility2" fitHeight="26.0" fitWidth="28.0"
+                                           layoutX="478.0" layoutY="372.0"
+                                           onDragDetected="#onChangePasswordVisibility2_signup"
+                                           onMouseClicked="#onChangePasswordVisibility2_signup" pickOnBounds="true"
+                                           preserveRatio="true" styleClass="bevel-grey">
+                                    <image>
+                                        <Image url="@visibility_white.png"/>
+                                    </image>
+                                </ImageView>
+                                <ProgressIndicator fx:id="progressbar1" layoutX="475.0" layoutY="500.0"
+                                                   prefHeight="34.0" prefWidth="39.0" progress="0.0"/>
+                            </children>
+                        </Pane>
+                    </children>
+                </StackPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="citationPane" prefHeight="631.0" prefWidth="919.0">
+            <children>
+                <ImageView fx:id="start" fitHeight="631.0" fitWidth="908.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@img.png"/>
+                    </image>
+                    <viewport>
+                        <Rectangle2D/>
+                    </viewport>
+                </ImageView>
+                <Text fx:id="citationText" fill="WHITE" fontSmoothingType="LCD" layoutX="274.0" layoutY="120.0"
+                      stroke="#230b3a" strokeType="OUTSIDE"
+                      text="&quot;L'éducation est l'arme la plus puissante pour changer le monde.&quot; – Nelson Mandela"
+                      wrappingWidth="359.47007751464844">
+                    <font>
+                        <Font name="System Italic" size="43.0"/>
+                    </font>
+                </Text>
+                <Button layoutX="764.0" layoutY="568.0" mnemonicParsing="false" onAction="#start" prefHeight="28.0"
+                        prefWidth="133.0" styleClass="record-sales" stylesheets="@../head.css" text="Commencer"/>
+                <Text fill="#ebdb98" layoutX="378.0" layoutY="40.0" stroke="#d2c9b2" strokeType="OUTSIDE"
+                      text="EducShare" underline="true">
+                    <font>
+                        <Font name="Baskerville Old Face" size="35.0"/>
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

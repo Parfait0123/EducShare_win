@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="324.0" prefWidth="421.0" style="-fx-border-radius: 15;"
+      styleClass="simpleStyle" stylesheets="@../head.css" xmlns="http://javafx.com/javafx/22"
+      fx:controller="docs.la_creme_des_cremes_docs.live.new_docController">
+    <children>
+        <Button layoutX="332.0" layoutY="277.0" mnemonicParsing="false" onAction="#valid" styleClass="record-sales"
+                text="Valider"/>
+        <HBox layoutX="38.0" layoutY="19.0" prefHeight="31.0" prefWidth="365.0">
+            <children>
+                <TextField fx:id="export_name_field" prefHeight="31.0" prefWidth="264.0"
+                           style="-fx-background-radius: 10;">
+                    <font>
+                        <Font name="Berlin Sans FB" size="16.0"/>
+                    </font>
+                </TextField>
+                <Button mnemonicParsing="false" onAction="#export" prefHeight="27.0" prefWidth="75.0"
+                        style="-fx-background-radius: 10;" text="Importer">
+                    <font>
+                        <Font name="Berlin Sans FB" size="14.0"/>
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <HBox layoutX="35.0" layoutY="61.0" prefHeight="35.0" prefWidth="352.0">
+            <children>
+                <Label prefHeight="32.0" prefWidth="182.0" text="Semestre  :">
+                    <font>
+                        <Font name="Berlin Sans FB" size="19.0"/>
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="semester" prefHeight="35.0" prefWidth="167.0" styleClass="choiceButtonStyle"/>
+            </children>
+        </HBox>
+        <HBox layoutX="35.0" layoutY="115.0" prefHeight="35.0" prefWidth="352.0">
+            <children>
+                <Label prefHeight="32.0" prefWidth="182.0" text="Matière    :">
+                    <font>
+                        <Font name="Berlin Sans FB" size="19.0"/>
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="subject" prefHeight="35.0" prefWidth="167.0" styleClass="choiceButtonStyle"/>
+            </children>
+        </HBox>
+        <HBox layoutX="35.0" layoutY="167.0" prefHeight="35.0" prefWidth="352.0">
+            <children>
+                <Label prefHeight="32.0" prefWidth="182.0" text="UE             :">
+                    <font>
+                        <Font name="Berlin Sans FB" size="19.0"/>
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="ue" prefHeight="35.0" prefWidth="167.0" styleClass="choiceButtonStyle"/>
+            </children>
+        </HBox>
+        <HBox layoutX="35.0" layoutY="213.0" prefHeight="35.0" prefWidth="352.0">
+            <children>
+                <Label prefHeight="32.0" prefWidth="182.0" text="Catégorie  :">
+                    <font>
+                        <Font name="Berlin Sans FB" size="19.0"/>
+                    </font>
+                </Label>
+                <StackPane>
+                    <children>
+                        <ChoiceBox fx:id="category" prefHeight="35.0" prefWidth="167.0" styleClass="choiceButtonStyle"/>
+                        <TextField fx:id="category_name_field" prefHeight="31.0" prefWidth="143.0"
+                                   style="-fx-background-radius: 10;" visible="false">
+                            <font>
+                                <Font name="Berlin Sans FB" size="16.0"/>
+                            </font>
+                        </TextField>
+                    </children>
+                </StackPane>
+            </children>
+        </HBox>
+        <Button mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#return_to_menu" prefHeight="33.0"
+                prefWidth="33.0" style="-fx-background-radius: 60;">
+            <cursor>
+                <Cursor fx:constant="CLOSED_HAND"/>
+            </cursor>
+            <graphic>
+                <ImageView fitHeight="25.0" fitWidth="24.0" onDragDetected="#return_to_menu" opacity="0.88">
+                    <image>
+                        <Image url="@../bouton-retour.png"/>
+                    </image>
+                    <effect>
+                        <Glow/>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="CLOSED_HAND"/>
+                    </cursor>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button layoutX="390.0" layoutY="218.0" mnemonicParsing="false" onAction="#new_category" prefHeight="10.0"
+                prefWidth="26.0" styleClass="add-button"/>
+        <ProgressIndicator fx:id="progress" layoutX="280.0" layoutY="277.0" prefHeight="42.0" prefWidth="40.0"
+                           visible="false"/>
+    </children>
+</Pane>

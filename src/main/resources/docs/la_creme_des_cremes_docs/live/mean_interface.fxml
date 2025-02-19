@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="view_Anchropane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="1295.0"
+            styleClass="background" stylesheets="@../head.css" xmlns="http://javafx.com/javafx/22"
+            fx:controller="docs.la_creme_des_cremes_docs.live.mean_interfaceController">
+    <children>
+        <ImageView fx:id="image" fitHeight="708.0" fitWidth="1295" layoutX="-4.0" layoutY="-2.0" pickOnBounds="true">
+            <image>
+                <Image url="@menu.jpg"/>
+            </image>
+            <viewport>
+                <Rectangle2D/>
+            </viewport>
+        </ImageView>
+        <TableView fx:id="doc_table" editable="true" layoutX="22.0" layoutY="115.0" opacity="0.9" prefHeight="403.0"
+                   prefWidth="1233.0" style="-fx-background-radius: 5;" tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="n_column" prefWidth="40.0" text="N°"/>
+                <TableColumn fx:id="doc_name_column" prefWidth="225.99996948242188" text="Nom du document"/>
+                <TableColumn fx:id="doc_semester_column" prefWidth="60.0" text="Semestre"/>
+                <TableColumn fx:id="doc_subject_column" prefWidth="196.66665649414062" text="Matière"/>
+                <TableColumn fx:id="doc_ue_column" prefWidth="155.99993896484375" text="UE"/>
+                <TableColumn fx:id="doc_category_column" prefWidth="192.00006103515625" text="Catégorie"/>
+                <TableColumn fx:id="doc_etoile_column" prefWidth="80.6666259765625" text="Etoile"/>
+                <TableColumn fx:id="doc_format_column" prefWidth="73.3333740234375" text="Format"/>
+                <TableColumn fx:id="doc_sendBy_column" prefWidth="154.0" text="Partagé par"/>
+                <TableColumn fx:id="doc_send_date_column" prefWidth="82.66668701171875" text="Partagé le"/>
+                <TableColumn fx:id="doc_is_Download_column" prefWidth="82.66668701171875" text="Téléchargé "/>
+            </columns>
+        </TableView>
+        <HBox layoutX="831.0" layoutY="64.0" prefHeight="44.0" prefWidth="393.0" spacing="5.0">
+            <children>
+                <HBox opacity="0.84" prefHeight="44.0" prefWidth="268.0"
+                      style="-fx-background-color: white; -fx-background-radius: 20;">
+                    <padding>
+                        <Insets left="5.0"/>
+                    </padding>
+                    <children>
+                        <Pane prefHeight="42.0" prefWidth="40.0" style="-fx-background-radius: 100;">
+                            <children>
+                                <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="6.0" layoutY="4.0"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@../rechercher.jpg"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                        <TextField fx:id="search_with_sector_field" prefHeight="42.0" prefWidth="203.0"
+                                   promptText="Entrez le nom du document"
+                                   style="-fx-background-radius: 20; -fx-border-color: WHITE; -fx-background-color: WHITE;">
+                            <font>
+                                <Font name="Berlin Sans FB" size="14.0"/>
+                            </font>
+                        </TextField>
+                    </children>
+                </HBox>
+                <Button mnemonicParsing="false" onAction="#search_with_field" prefHeight="42.0" prefWidth="107.0"
+                        styleClass="record-sales" text="Rechercher">
+                    <font>
+                        <Font name="Berlin Sans FB" size="13.0"/>
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <HBox layoutX="104.0" layoutY="528.0" opacity="0.79" prefHeight="52.0" prefWidth="1087.0" spacing="70.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#download_file" prefHeight="50.0" prefWidth="233.0"
+                        styleClass="large-button" text="Télécharger ">
+                    <font>
+                        <Font name="Berlin Sans FB" size="20.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#see_file" prefHeight="50.0"
+                        prefWidth="191.0" styleClass="large-button" text="Ouvrir">
+                    <font>
+                        <Font name="Berlin Sans FB" size="20.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="173.0" layoutY="10.0" mnemonicParsing="false" onAction="#send_file" prefHeight="50.0"
+                        prefWidth="197.0" styleClass="large-button" text="Sur le bureau">
+                    <font>
+                        <Font name="Berlin Sans FB" size="20.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#note_file" prefHeight="50.0"
+                        prefWidth="233.0" styleClass="large-button" text="Noter">
+                    <font>
+                        <Font name="Berlin Sans FB" size="20.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="725.0" layoutY="10.0" mnemonicParsing="false" onAction="#see_docs_comment"
+                        prefHeight="50.0" prefWidth="233.0" styleClass="large-button" text="Commentaires">
+                    <font>
+                        <Font name="Berlin Sans FB" size="20.0"/>
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <HBox layoutX="160.0" layoutY="589.0" opacity="0.8" prefHeight="52.0" prefWidth="958.0" spacing="50.0">
+            <children>
+                <Button layoutX="337.0" layoutY="10.0" mnemonicParsing="false" onAction="#add_doc" prefHeight="50.0"
+                        prefWidth="232.0" styleClass="large-button" text="Ajouter un document">
+                    <font>
+                        <Font name="Berlin Sans FB" size="20.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="570.0" layoutY="10.0" mnemonicParsing="false" onAction="#update_doc" prefHeight="50.0"
+                        prefWidth="218.0" styleClass="large-button" text="Mettre à jour ">
+                    <font>
+                        <Font name="Berlin Sans FB" size="20.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="173.0" layoutY="10.0" mnemonicParsing="false" onAction="#remove_doc" prefHeight="50.0"
+                        prefWidth="188.0" styleClass="large-button-remove" text="Supprimer ">
+                    <font>
+                        <Font name="Berlin Sans FB" size="20.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#search_more" prefHeight="50.0"
+                        prefWidth="218.0" styleClass="large-button" text="Recherche avancée">
+                    <font>
+                        <Font name="Berlin Sans FB" size="20.0"/>
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <MenuButton layoutX="1170.0" layoutY="9.0" mnemonicParsing="false" opacity="0.67" prefHeight="23.0"
+                    prefWidth="107.0" styleClass="average-pane2" text="Menu">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#recharger_le_tableau" text="Recharger"/>
+                <MenuItem mnemonicParsing="false" onAction="#administration" text="Menu d'administration"/>
+                <MenuItem mnemonicParsing="false" onAction="#modifyPass" text="Modifier mon mot de passe"/>
+            </items>
+        </MenuButton>
+        <Label fx:id="classe_field" layoutX="498.0" layoutY="8.0" prefHeight="30.0" prefWidth="282.0" text="CLASSE"
+               textFill="#fffefe">
+            <font>
+                <Font name="Bookman Old Style" size="30.0"/>
+            </font>
+        </Label>
+        <ProgressIndicator fx:id="progress" layoutX="454.0" layoutY="71.0" prefHeight="30.0" prefWidth="40.0"
+                           visible="false"/>
+        <Button fx:id="chrono" layoutX="1132.0" layoutY="13.0" mnemonicParsing="false" prefHeight="28.0"
+                prefWidth="28.0" styleClass="average-pane2" text="0" visible="false">
+            <font>
+                <Font name="Berlin Sans FB" size="14.0"/>
+            </font>
+        </Button>
+        <Text fx:id="text" fill="#fffdfd" layoutX="22.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="&quot;La réussite commence par une simple action.&quot;" wrappingWidth="260.6666717529297">
+            <font>
+                <Font name="Bodoni MT" size="21.0"/>
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

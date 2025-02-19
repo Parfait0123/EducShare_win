@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity"
+      prefHeight="283.0" prefWidth="440.0" style="-fx-border-radius: 15;" styleClass="simpleStyle"
+      stylesheets="@../head.css" xmlns="http://javafx.com/javafx/22"
+      fx:controller="docs.la_creme_des_cremes_docs.subject.subjectDetailsController">
+    <children>
+        <VBox layoutX="24.0" layoutY="14.0" prefHeight="189.0" prefWidth="408.0" spacing="15.0">
+            <children>
+                <HBox prefHeight="35.0" prefWidth="352.0">
+                    <children>
+                        <Label prefHeight="32.0" prefWidth="182.0" text="Nom :">
+                            <font>
+                                <Font name="Berlin Sans FB" size="19.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="name_field" prefHeight="35.0" prefWidth="222.0">
+                            <font>
+                                <Font name="Berlin Sans FB" size="15.0"/>
+                            </font>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="352.0">
+                    <children>
+                        <Label prefHeight="32.0" prefWidth="181.0" text="Nombre de crédit:">
+                            <font>
+                                <Font name="Berlin Sans FB" size="19.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="loan_field" prefHeight="35.0" prefWidth="223.0">
+                            <font>
+                                <Font name="Berlin Sans FB" size="15.0"/>
+                            </font>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="45.0" prefHeight="35.0" prefWidth="352.0">
+                    <children>
+                        <Label prefHeight="32.0" prefWidth="183.0" text="Nombre d'UE :">
+                            <font>
+                                <Font name="Berlin Sans FB" size="19.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="ue_number_field" prefHeight="35.0" prefWidth="223.0">
+                            <font>
+                                <Font name="Berlin Sans FB" size="15.0"/>
+                            </font>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="81.0" prefHeight="35.0" prefWidth="373.0">
+                    <children>
+                        <Label prefHeight="32.0" prefWidth="183.0" text="Nom de l'enseignant:">
+                            <font>
+                                <Font name="Berlin Sans FB" size="19.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="techears_name_field" prefHeight="35.0" prefWidth="226.0">
+                            <font>
+                                <Font name="Berlin Sans FB" size="15.0"/>
+                            </font>
+                        </TextField>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Button layoutX="357.0" layoutY="235.0" mnemonicParsing="false" onAction="#save" styleClass="record-sales"
+                text="Valider">
+            <font>
+                <Font name="Berlin Sans FB" size="14.0"/>
+            </font>
+        </Button>
+        <Button layoutX="14.0" layoutY="235.0" mnemonicParsing="false" onAction="#return_to_view"
+                styleClass="record-sales" text="Annuler">
+            <font>
+                <Font name="Berlin Sans FB" size="14.0"/>
+            </font>
+        </Button>
+    </children>
+</Pane>

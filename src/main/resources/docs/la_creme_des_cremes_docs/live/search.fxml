@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity"
+      prefHeight="324.0" prefWidth="421.0" style="-fx-border-radius: 15;" styleClass="simpleStyle"
+      stylesheets="@../head.css" xmlns="http://javafx.com/javafx/22"
+      fx:controller="docs.la_creme_des_cremes_docs.live.searchController">
+    <children>
+        <Button layoutX="307.0" layoutY="277.0" mnemonicParsing="false" onAction="#search" styleClass="record-sales"
+                text="Rechercher"/>
+        <Button layoutX="23.0" layoutY="277.0" mnemonicParsing="false" onAction="#return_to_menu"
+                styleClass="record-sales" text="Annuler"/>
+        <HBox layoutX="35.0" layoutY="61.0" prefHeight="35.0" prefWidth="352.0">
+            <children>
+                <Label prefHeight="32.0" prefWidth="182.0" text="Semestre  :">
+                    <font>
+                        <Font name="Berlin Sans FB" size="19.0"/>
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="semester" prefHeight="35.0" prefWidth="167.0" styleClass="choiceButtonStyle"/>
+            </children>
+        </HBox>
+        <HBox layoutX="35.0" layoutY="115.0" prefHeight="35.0" prefWidth="352.0">
+            <children>
+                <Label prefHeight="32.0" prefWidth="182.0" text="Matière    :">
+                    <font>
+                        <Font name="Berlin Sans FB" size="19.0"/>
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="subject" prefHeight="35.0" prefWidth="167.0" styleClass="choiceButtonStyle"/>
+            </children>
+        </HBox>
+        <HBox layoutX="35.0" layoutY="167.0" prefHeight="35.0" prefWidth="352.0">
+            <children>
+                <Label prefHeight="32.0" prefWidth="182.0" text="UE             :">
+                    <font>
+                        <Font name="Berlin Sans FB" size="19.0"/>
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="ue" prefHeight="35.0" prefWidth="167.0" styleClass="choiceButtonStyle"/>
+            </children>
+        </HBox>
+        <HBox layoutX="35.0" layoutY="213.0" prefHeight="35.0" prefWidth="352.0">
+            <children>
+                <Label prefHeight="32.0" prefWidth="182.0" text="Catégorie  :">
+                    <font>
+                        <Font name="Berlin Sans FB" size="19.0"/>
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="category" prefHeight="35.0" prefWidth="167.0" styleClass="choiceButtonStyle"/>
+            </children>
+        </HBox>
+        <Label layoutX="127.0" layoutY="9.0" prefHeight="32.0" prefWidth="202.0" text="Rechercez un document"
+               underline="true">
+            <font>
+                <Font name="Berlin Sans FB" size="17.0"/>
+            </font>
+        </Label>
+        <Button mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#return_to_menu" prefHeight="39.0"
+                prefWidth="40.0" style="-fx-background-radius: 60;">
+            <cursor>
+                <Cursor fx:constant="CLOSED_HAND"/>
+            </cursor>
+            <graphic>
+                <ImageView fitHeight="25.0" fitWidth="28.0" onDragDetected="#return_to_menu" opacity="0.88">
+                    <image>
+                        <Image url="@../bouton-retour.png"/>
+                    </image>
+                    <effect>
+                        <Glow/>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="CLOSED_HAND"/>
+                    </cursor>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+</Pane>

@@ -1,0 +1,111 @@
+/*
+  Copyright 2021 rahulstch
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ */
+.page {
+    -fx-background-color: linear-gradient(to bottom right, #283593 0%, #651FFF 70%, #2979FF 100%);
+}
+
+/* TextField related styling */
+
+.text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: #9E9E9E;
+    -fx-font-size: 18px;
+    -fx-border-width: 0 0 2 0;
+    -fx-text-fill: #9E9E9E;
+}
+
+.text-field:focused {
+    -fx-border-color: white;
+    -fx-text-fill: white;
+}
+
+.text-field:focused.error {
+    -fx-border-color: #e53935;
+}
+
+.text-field:focused.success {
+    -fx-border-color: #4CAF50;
+}
+
+.text-field:focused.warning {
+    -fx-border-color: #FF9800;
+}
+
+.text-field:focused.information {
+    -fx-border-color: #00BCD4;
+}
+
+/* Button related styling */
+
+.button {
+    -fx-background-radius: 22px;
+}
+
+.btn-solid {
+    -fx-background-color: #689F38;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+
+.btn-solid:hover {
+    -fx-background-color: #558B2F;
+}
+
+.btn-transparent {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+
+.btn-transparent:hover {
+    -fx-background-color: rgba(40, 53, 147, .25);
+}
+
+/* Hyperlink related styling */
+
+.hyperlink {
+    -fx-text-fill: #FDD835;
+    -fx-border-color: transparent;
+}
+
+.hyperlink: hover {
+    -fx-underline: true;
+}
+
+/* Floating Message related styling */
+
+.floating-message {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 4px;
+    -fx-background-radius: 10px;
+}
+
+.floating-message.error {
+    -fx-background-color: #e53935;
+}
+
+.floating-message.success {
+    -fx-background-color: #4CAF50;
+}
+
+.floating-message.warning {
+    -fx-background-color: #FF9800;
+}
+
+.floating-message.information {
+    -fx-background-color: #00BCD4;
+}
